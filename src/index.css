@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brand */
+:root { --brand: #1960B0; }
+.brand-gradient { background: linear-gradient(135deg, #1960B0, #2b7ad6); }
+
+/* Marquee halus untuk deskripsi hero */
+@keyframes marqueeX {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee {
+  display: inline-block;
+  min-width: 200%;
+  animation: marqueeX 14s linear infinite;
+}
+
+/* Zoom-surface (produk) tetap */
+.zoom-surface { transition: transform .28s ease, filter .28s ease; will-change: transform; }
+.zoom-surface:has(.product-card:hover) { transform: scale(1.01); filter: drop-shadow(0 6px 24px rgba(0,0,0,.10)); }
+@media (prefers-reduced-motion: reduce) {
+  .marquee, .zoom-surface { animation: none !important; transition: none !important; }
+}
+
+/* UX kecil */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{ -webkit-appearance:none; margin:0; }
+input[type="number"]{ -moz-appearance:textfield; }
+::selection{ background: rgba(25,96,176,.18); color:#0f172a; }
+img{ image-rendering:auto; backface-visibility:hidden; }
