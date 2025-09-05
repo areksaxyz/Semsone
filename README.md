@@ -1,69 +1,121 @@
-# React + TypeScript + Vite
+# 💼 SemsOne — Sistem Manajemen Operasional UKM
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Selamat datang di repositori **SemsOne** – sebuah aplikasi web modern berbasis **React + TypeScript** untuk mengelola operasional UKM/organisasi.  
+Sistem ini mencakup **presensi & notulen**, **keuangan**, **produksi**, **katalog produk**, hingga **kasir** (transaksi + cetak struk).  
+Semua data tersimpan di **localStorage** sehingga dapat digunakan secara **offline**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Fitur Utama
 
-## Expanding the ESLint configuration
+* **Beranda (Dashboard)**
+  * Headline & deskripsi animasi (*small price, big taste*).
+  * Navigasi cepat ke setiap modul (Sekretaris, Bendahara, Produksi, Produk, Kasir).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Sekretaris**
+  * **Presensi** – input cepat per tanggal, set massal (Hadir/Izin/Sakit/Tanpa Ket.).
+  * **Riwayat Kehadiran** – lihat siapa hadir/izin/sakit/TT sesuai tanggal input.
+  * **Export CSV & XLSX**.
+  * **Notulen Rapat** – simpan judul, tanggal, ringkasan; export **PDF**.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* **Bendahara**
+  * **Catatan Pemasukan & Pengeluaran**.
+  * **Kalkulator Harga Jual**:  
+    ```
+    (Modal + Biaya Operasional + (%Keuntungan × (Modal+Biaya))) ÷ Jumlah Produk
+    ```
+    Output otomatis dalam format **Rupiah**.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+* **Produksi**
+  * **Stok barang**, **daftar belanja**, dan **jadwal produksi**.
+  * Modular dan mudah dikembangkan.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* **Menu Produk**
+  * Daftar produk (Dimsum, Cireng, Pastry, Brownies, Kopi).
+  * Gambar produk dari **galeri lokal** (bukan link).
+  * Varian & harga jelas, search + filter kategori.
+  * Hover → animasi zoom gambar & page.
+  * Tombol **Order** + jumlah pcs.
+
+* **Kasir**
+  * Input **nama pembeli**, **uang pembayaran**, hitung **kembalian** otomatis.
+  * Tabel pesanan (ubah qty, hapus item).
+  * **Preview struk**.
+  * **Download PNG** (via Canvas, stabil) & **Cetak** langsung.
+  * Layout profesional: logo toko, tanggal & waktu, kasir, daftar item, total, bayar, kembalian.
+
+---
+
+## 🖼️ Contoh Tampilan
+
+### 1. Dashboard Beranda
+Navigasi modul utama dengan kartu interaktif.  
+![Beranda](docs/beranda.png)
+
+### 2. Presensi & Riwayat
+Input cepat & riwayat per tanggal.  
+![Presensi](docs/presensi.png)
+
+### 3. Notulen Rapat
+Form input notulen + export PDF.  
+![Notulen](docs/notulen.png)
+
+### 4. Menu Produk
+Produk dengan varian & gambar.  
+![Produk](docs/produk.png)
+
+### 5. Kasir & Struk
+Transaksi + preview struk PNG.  
+![Kasir](docs/kasir.png)
+
+---
+
+## ⚙️ Teknologi yang Digunakan
+
+* **Bahasa Pemrograman**: TypeScript
+* **Framework**: React (Vite)
+* **UI Styling**: Tailwind CSS
+* **Animasi**: Framer Motion
+* **Data Persistensi**: localStorage (`utils/storage.ts`)
+* **Export**: CSV, XLSX, PDF, PNG
+
+---
+
+## 📦 Struktur Folder
+src/
+components/ # Komponen UI (Button, Card, Modal, dll.)
+data/ # Data awal (produk, constants, anggota)
+features/ # Modul: sekretaris, bendahara, produksi, produk, kasir
+pages/ # Halaman utama (Beranda, Login)
+utils/ # Helper export, storage, pricing
+index.css # Tailwind + animasi marquee
+public/images/ # Aset produk (dimsum1.jpg, cireng.jpg, dll.)
+public/logo.png # Logo utama
+
+---
+
+## 🔧 Prasyarat
+
+* Node.js **>= 18**
+* npm / yarn / pnpm
+
+---
+
+## 🚀 Instalasi & Menjalankan
+
+### 1. Clone repo
+```bash
+git clone https://github.com/areksaxyz/semsone.git
+cd semsone
+npm install
+```
+atau
+```
+pnpm install
+```
+### Jalnkan development server
+```
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
