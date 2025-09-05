@@ -80,19 +80,7 @@ Transaksi + preview struk PNG.
 * **Export**: CSV, XLSX, PDF, PNG
 
 ---
-## 📦 Struktur Folder
 
-
-## 📦 Struktur Folder
-src/
-components/ # Komponen UI (Button, Card, Modal, dll.)
-data/ # Data awal (produk, constants, anggota)
-features/ # Modul: sekretaris, bendahara, produksi, produk, kasir
-pages/ # Halaman utama (Beranda, Login)
-utils/ # Helper export, storage, pricing
-index.css # Tailwind + animasi marquee
-public/images/ # Aset produk (dimsum1.jpg, cireng.jpg, dll.)
-public/logo.png # Logo utama
 
 ---
 
