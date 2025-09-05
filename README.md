@@ -72,27 +72,28 @@ Navigasi ke semua modul melalui kartu interaktif.
 
 ### 3. Sekretaris – Presensi & Riwayat
 Input cepat kehadiran anggota + riwayat presensi per tanggal.  
-![Presensi](docs/presensi.png)
+![Presensi](semsone/sekretaris.png)
 
 ### 4. Sekretaris – Notulen Rapat
 Form input notulen lengkap dengan export ke PDF.  
-![Notulen](docs/notulen.png)
+![Notulen](semsone/sekretaris1.png)
 
 ### 5. Bendahara
 Modul pencatatan pendapatan, pengeluaran, dan modal usaha.  
-![Bendahara](docs/bendahara.png)
+![Bendahara](semsone/bendahara.png)
 
 ### 6. Produksi
 Manajemen stok, belanja, dan jadwal produksi.  
-![Produksi](docs/produksi.png)
+![Produksi](semsone/produksi.png)
 
 ### 7. Menu Produk
 Katalog produk dengan varian & gambar (Dimsum, Brownies, Cireng, Pastry, dll).  
-![Produk](docs/produk.png)
+![Produk](semsone/menuproduk.png)
 
 ### 8. Kasir & Struk
 Transaksi penjualan dengan preview struk (download PNG & cetak).  
-![Kasir](docs/kasir.png)
+![Kasir](semsone/kasir.png)
+![Struk](semsone/struk.png)
 
 
 ---
