@@ -95,8 +95,8 @@ Transaksi + preview struk PNG.
 
 ### 1. Clone repo
 ```bash
-git clone https://github.com/areksaxyz/semsone.git
-cd semsone
+git clone https://github.com/areksaxyz/Semsone
+cd Semsone
 npm install
 ```
 atau
