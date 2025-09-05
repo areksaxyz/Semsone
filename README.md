@@ -45,8 +45,20 @@ Semua data tersimpan di **localStorage** sehingga dapat digunakan secara **offli
   * Layout profesional: logo toko, tanggal & waktu, kasir, daftar item, total, bayar, kembalian.
 
 ---
-
+```plaintext
+src/
+├── components/       # Komponen UI (Button, Card, Modal, dll.)
+├── data/             # Data awal (produk, constants, anggota)
+├── features/         # Modul: sekretaris, bendahara, produksi, produk, kasir
+├── pages/            # Halaman utama (Beranda, Login)
+├── utils/            # Helper export, storage, pricing
+├── index.css         # Tailwind + animasi marquee
+public/
+├── images/           # Aset produk (dimsum1.jpg, cireng.jpg, pastry.jpg, dll.)
+└── logo.png          # Logo utama
 ## 🖼️ Contoh Tampilan
+```
+
 
 ### 1. Dashboard Beranda
 Navigasi modul utama dengan kartu interaktif.  
@@ -79,20 +91,6 @@ Transaksi + preview struk PNG.
 * **Data Persistensi**: localStorage (`utils/storage.ts`)
 * **Export**: CSV, XLSX, PDF, PNG
 
----
-```plaintext
-src/
-├── components/       # Komponen UI (Button, Card, Modal, dll.)
-├── data/             # Data awal (produk, constants, anggota)
-├── features/         # Modul: sekretaris, bendahara, produksi, produk, kasir
-├── pages/            # Halaman utama (Beranda, Login)
-├── utils/            # Helper export, storage, pricing
-├── index.css         # Tailwind + animasi marquee
-public/
-├── images/           # Aset produk (dimsum1.jpg, cireng.jpg, pastry.jpg, dll.)
-└── logo.png          # Logo utama
-
-```
 ---
 
 ## 🔧 Prasyarat
