@@ -80,6 +80,8 @@ Transaksi + preview struk PNG.
 * **Export**: CSV, XLSX, PDF, PNG
 
 ---
+## 📦 Struktur Folder
+
 
 ## 📦 Struktur Folder
 src/
