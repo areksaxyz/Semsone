@@ -60,25 +60,40 @@ public/
 ```
 
 
-### 1. Dashboard Beranda
-Navigasi modul utama dengan kartu interaktif.  
+## 🖼️ Tampilan Aplikasi
+
+### 1. Login
+Halaman autentikasi pengguna untuk masuk ke sistem.  
+![Login](docs/login.png)
+
+### 2. Dashboard Beranda
+Navigasi ke semua modul melalui kartu interaktif.  
 ![Beranda](docs/beranda.png)
 
-### 2. Presensi & Riwayat
-Input cepat & riwayat per tanggal.  
+### 3. Sekretaris – Presensi & Riwayat
+Input cepat kehadiran anggota + riwayat presensi per tanggal.  
 ![Presensi](docs/presensi.png)
 
-### 3. Notulen Rapat
-Form input notulen + export PDF.  
+### 4. Sekretaris – Notulen Rapat
+Form input notulen lengkap dengan export ke PDF.  
 ![Notulen](docs/notulen.png)
 
-### 4. Menu Produk
-Produk dengan varian & gambar.  
+### 5. Bendahara
+Modul pencatatan pendapatan, pengeluaran, dan modal usaha.  
+![Bendahara](docs/bendahara.png)
+
+### 6. Produksi
+Manajemen stok, belanja, dan jadwal produksi.  
+![Produksi](docs/produksi.png)
+
+### 7. Menu Produk
+Katalog produk dengan varian & gambar (Dimsum, Brownies, Cireng, Pastry, dll).  
 ![Produk](docs/produk.png)
 
-### 5. Kasir & Struk
-Transaksi + preview struk PNG.  
+### 8. Kasir & Struk
+Transaksi penjualan dengan preview struk (download PNG & cetak).  
 ![Kasir](docs/kasir.png)
+
 
 ---
 
