@@ -64,11 +64,11 @@ public/
 
 ### 1. Login
 Halaman autentikasi pengguna untuk masuk ke sistem.  
-![Login](docs/login.png)
+![Login](semsone/login.png)
 
 ### 2. Dashboard Beranda
 Navigasi ke semua modul melalui kartu interaktif.  
-![Beranda](docs/beranda.png)
+![Beranda](semsone/beranda.png)
 
 ### 3. Sekretaris – Presensi & Riwayat
 Input cepat kehadiran anggota + riwayat presensi per tanggal.  
