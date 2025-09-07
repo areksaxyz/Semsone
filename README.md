@@ -56,7 +56,6 @@ src/
 public/
 ├── images/           # Aset produk (dimsum1.jpg, cireng.jpg, pastry.jpg, dll.)
 └── logo.png          # Logo utama
-## 🖼️ Contoh Tampilan
 ```
 
 
